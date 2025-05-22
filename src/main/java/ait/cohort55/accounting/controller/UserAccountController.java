@@ -51,7 +51,7 @@ public class UserAccountController {
 
     @PatchMapping("/password")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void changePassword(Principal principal, @RequestHeader("X_Password") String newPassword) {
+    public void changePassword(Principal principal, @RequestHeader("X-Password") String newPassword) {
         // FIXME
         userAccountService.changePassword(principal.getName(), newPassword);
     }
